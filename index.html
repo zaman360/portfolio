@@ -63,6 +63,8 @@ background:linear-gradient(90deg,#38bdf8,#06b6d4,#8b5cf6);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 margin-bottom:15px;
+animation:float 3s ease-in-out infinite;
+}
 }
 
 .subtitle{
@@ -318,6 +320,16 @@ Auckland Institute of Studies (AIS)
 © 2026 Touhiduzzaman • Built with ❤️
 
 </footer>
-
+@keyframes float{
+0%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-15px);
+}
+100%{
+transform:translateY(0);
+}
+}
 </body>
 </html>
