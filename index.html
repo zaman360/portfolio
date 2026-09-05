@@ -6,16 +6,314 @@
 <title>Touhiduzzaman | Portfolio</title>
 
 <style>
-body{
-    background:#050816;
-    color:white;
-    font-family:Arial,sans-serif;
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
 }
+
+body{
+background:#050816;
+color:white;
+overflow-x:hidden;
+}
+
+/* Animated Stars Background */
+
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:
+radial-gradient(white 1px,transparent 1px),
+radial-gradient(#67e8f9 1px,transparent 1px);
+background-size:60px 60px;
+opacity:.15;
+z-index:-1;
+animation:moveStars 60s linear infinite;
+}
+
+@keyframes moveStars{
+from{
+transform:translateY(0);
+}
+to{
+transform:translateY(-1000px);
+}
+}
+
+header{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+padding:20px;
+}
+
+h1{
+font-size:4rem;
+background:linear-gradient(90deg,#38bdf8,#06b6d4,#8b5cf6);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+margin-bottom:15px;
+}
+
+.subtitle{
+font-size:1.3rem;
+color:#cbd5e1;
+}
+
+.hero-btns{
+margin-top:30px;
+}
+
+.hero-btns a{
+text-decoration:none;
+padding:15px 30px;
+border-radius:30px;
+margin:10px;
+display:inline-block;
+font-weight:bold;
+}
+
+.cv{
+background:#06b6d4;
+color:white;
+}
+
+.github{
+border:2px solid #06b6d4;
+color:#06b6d4;
+}
+
+section{
+padding:80px 10%;
+}
+
+.section-title{
+font-size:2.5rem;
+margin-bottom:30px;
+color:#38bdf8;
+}
+
+.card{
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(12px);
+padding:30px;
+border-radius:20px;
+margin-bottom:25px;
+transition:.4s;
+box-shadow:0 0 20px rgba(0,0,0,.3);
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+.skill{
+background:#111827;
+padding:20px;
+border-radius:12px;
+}
+
+.bar{
+height:10px;
+background:#1f2937;
+border-radius:20px;
+margin-top:10px;
+}
+
+.fill{
+height:100%;
+background:linear-gradient(90deg,#06b6d4,#8b5cf6);
+border-radius:20px;
+}
+
+.timeline{
+border-left:3px solid #06b6d4;
+padding-left:25px;
+}
+
+.timeline-item{
+margin-bottom:30px;
+}
+
+footer{
+text-align:center;
+padding:40px;
+color:#94a3b8;
+}
+
+@media(max-width:768px){
+
+h1{
+font-size:2.5rem;
+}
+
+.section-title{
+font-size:2rem;
+}
+
+}
+
 </style>
 </head>
+
 <body>
 
+<header>
+
 <h1>Touhiduzzaman</h1>
+
+<p class="subtitle">
+IT Student • Sales Professional • Customer Service Specialist
+</p>
+
+<div class="hero-btns">
+
+#
+Download CV
+</a>
+
+https://github.com/zaman360
+GitHub
+</a>
+
+</div>
+
+</header>
+
+<section>
+
+<h2 class="section-title">About Me</h2>
+
+<div class="card">
+
+<p>
+I am a Bachelor of Information Technology student at Auckland Institute of Studies (AIS), New Zealand.
+
+I have experience in customer service, sales, and hospitality across New Zealand and Bangladesh. I enjoy technology, problem solving, teamwork, and continuous learning as I work toward a career in Information Technology.
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Skills</h2>
+
+<div class="skills">
+
+<div class="skill">
+HTML & CSS
+<div class="bar">
+<div class="fill" style="width:90%"></div>
+</div>
+</div>
+
+<div class="skill">
+Customer Service
+<div class="bar">
+<div class="fill" style="width:95%"></div>
+</div>
+</div>
+
+<div class="skill">
+Sales
+<div class="bar">
+<div class="fill" style="width:90%"></div>
+</div>
+</div>
+
+<div class="skill">
+Problem Solving
+<div class="bar">
+<div class="fill" style="width:85%"></div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Experience</h2>
+
+<div class="card timeline">
+
+<div class="timeline-item">
+<h3>Bull's Burger</h3>
+<p>Team Member • 2025 - Present</p>
+</div>
+
+<div class="timeline-item">
+<h3>Max Collection</h3>
+<p>Sales Assistant • 2024</p>
+</div>
+
+<div class="timeline-item">
+<h3>Zast Clothing & Fashion</h3>
+<p>Sales Representative • 2022 - 2024</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Education</h2>
+
+<div class="card">
+
+<h3>Bachelor of Information Technology (Level 7)</h3>
+
+<p>
+Auckland Institute of Studies (AIS)
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Contact</h2>
+
+<div class="card">
+
+<p>📧 touhiduzzaman31@gmail.com</p>
+<br>
+
+<p>📱 020 438 1288</p>
+<br>
+
+<p>📍 Auckland, New Zealand</p>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Touhiduzzaman • Built with ❤️
+
+</footer>
 
 </body>
 </html>
